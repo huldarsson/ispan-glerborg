@@ -17,7 +17,6 @@
 
 .item{
   text-decoration: none;
-  padding: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -39,13 +38,47 @@
 
 .item__image{
   width: 70%;
+  padding: 10px;
+
 }
 
 .item__desc{
   text-align: center;
  color:black;
+ display: flex;
+ align-items: center;
  text-decoration: none;
- margin-bottom: 10px;
+ height: 28%;
+ position: relative;
+ background-color: #00909F;
+ border-radius: 5px;
+}
+
+.item__wrapper{
+  z-index: 10;
+  color: white;
+  margin: 10px 0px;
+ border-radius: 5px;
+
+
+}
+
+.item__desc:after{
+ border-radius: 0 0 5px 5px;
+  
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  content: "";
+  background: inherit;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  transform-origin: bottom left;
+  transform: skewY(-4deg);
+  z-index: 1;
+
 }
 
 .description__container{
